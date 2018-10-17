@@ -24,3 +24,5 @@ Print out the marker (example) and track the pose.
 
 The pose will be sent to a UDP server, and can be received with the socket_receive.py
 script as well.
+
+![](pose-demo.gif)

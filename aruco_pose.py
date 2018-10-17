@@ -224,7 +224,7 @@ if __name__ == "__main__":
     # change parameters here
 
     camera_num = 1     # use 0 for default laptop webcam, or 1 for an external
-    directory = 'checker-board'  # provide directory for the calibration images
+    directory = 'checker-board-pics'  # provide directory for the calibration images
     display = True  # if you want to see the images with the pose
 
     main(directory, camera_num, display)
