@@ -149,8 +149,8 @@ class Pose:
                     yrot = int(yrot)  # blue
                     zrot = int(zrot)  # red
 
-                    socket_out = str(xrot) + ' ' + str(yrot) + ' ' + str(zrot)
-                    display_out = 'pitch: ' + str(xrot) + ' yaw: ' + str(yrot) + ' roll: ' + str(zrot)
+                    socket_out = 'marker# ' + str(index) + ' ' + str(xrot) + ' ' + str(yrot) + ' ' + str(zrot)
+                    display_out = 'marker#: ' + str(index) + ' ' + 'pitch: ' + str(xrot) + ' yaw: ' + str(yrot) + ' roll: ' + str(zrot)
 
                     # send to server
                     self.server.send(socket_out)
@@ -217,7 +217,7 @@ def main(directory, camera_num, display):
     calibrations = calibrator.calibrate(directory)
     
     poser = Pose(camera_num)
-    pitch, yaw, roll = poser.stream_pose(calibrations, display)
+    poser.stream_pose(calibrations, display)
 
 if __name__ == "__main__":
 
